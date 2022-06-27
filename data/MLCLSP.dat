@@ -1,0 +1,24 @@
+set K := P B1 B2 E;
+param T := 4;
+param h :    1   2   3   4   :=
+          P  4.0 4.0 4.0 4.0    
+          B1 1.1 1.1 1.1 1.1   
+          B2 1.1 1.1 1.1 1.1   
+	      E  1.0 1.0 1.0 1.0 ;
+param s := P 100  B1 100  B2 100  E 100;
+param a :     P B1 B2  E :=
+          P   0  0  0  0  
+          B1  1  0  0  0 
+          B2  1  0  0  0 
+	      E   0  1  1  0 ;
+param d :     1   2   3   4  :=
+          P  10  10  30  15   
+          B1  0   0   0   0  
+          B2  0   0   0   0  
+	      E   0   0   0   0  ;
+param y0 := P 0  B1 0  B2 0  E 0;
+param tb := P 1  B1 1  B2 1  E 1;
+param tr := P 10  B1 10  B2 10  E 10;
+param b := 1 140  2 140  3 140  4 140;
+
+end;

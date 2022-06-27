@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration name="CONFIG">
+  <!-- legend: Display chart legend in the UI. -->
+  <preferences legend="true"/>
+  <solvers>
+    <!-- name: This name is displayed in the UI. Caution: This is the unique identifier of a solver (handled internally). -->
+    <!-- cmd: Path to the program or just the name of the program if it has been added to the PATH variable. -->
+    <!-- success: Exit code for a successful termination. This field can be left empty if return codes are unknown. -->
+    <!-- solution: Path of the solution file as output or the name of an option where the path of the solution file is specified. This field can be left empty if no solution file is output. -->
+    <!-- chart: Path of the chart file as output or the name of an option where the path of the chart file is specified. This field can be left empty if no chart file is output. -->
+    <solver name="SNP" cmd="solvers/glpsol" success="0" solution="solution" chart="out/SNP.chart">
+      <options>
+        <!-- name: This name is displayed in the UI. Caution: This is the unique identifier of an option of the associated solver (handled internally). -->
+        <!-- cmd: Command line option flag. This field can be left empty if the option is not indicated by any flags. -->
+        <!-- value: This is input by the user in the UI and is the value of the associated option flag. This field can be left empty or filled with a predifined value. -->
+        <!-- show: Display the option in the UI. -->
+        <option name="model" cmd="-m" value="models/SNP.mod" show="false"/>
+        <option name="data" cmd="-d" value="data/SNP.dat" show="true"/>
+        <option name="log" cmd="--log" value="out/SNP.log" show="false"/>
+        <option name="solution" cmd="-o" value="out/SNP.sol" show="false"/>
+      </options>
+    </solver>
+    <solver name="MPS" cmd="solvers/glpsol" success="0" solution="solution" chart="out/MPS.chart">
+      <options>
+        <option name="model" cmd="-m" value="models/MPS.mod" show="false"/>
+        <option name="data" cmd="-d" value="data/MPS.dat" show="true"/>
+        <option name="log" cmd="--log" value="out/MPS.log" show="false"/>
+        <option name="solution" cmd="-o" value="out/MPS.sol" show="false"/>
+      </options>
+    </solver>
+    <solver name="CLSP" cmd="solvers/glpsol" success="0" solution="solution" chart="out/CLSP.chart">
+      <options>
+        <option name="model" cmd="-m" value="models/CLSP.mod" show="false"/>
+        <option name="data" cmd="-d" value="data/CLSP.dat" show="true"/>
+        <option name="log" cmd="--log" value="out/CLSP.log" show="false"/>
+        <option name="solution" cmd="-o" value="out/CLSP.sol" show="false"/>
+      </options>
+    </solver>
+    <solver name="PLSP" cmd="solvers/glpsol" success="0" solution="solution" chart="out/PLSP.chart">
+      <options>
+        <option name="model" cmd="-m" value="models/PLSP.mod" show="false"/>
+        <option name="data" cmd="-d" value="data/PLSP.dat" show="true"/>
+        <option name="log" cmd="--log" value="out/PLSP.log" show="false"/>
+        <option name="solution" cmd="-o" value="out/PLSP.sol" show="false"/>
+      </options>
+    </solver>
+    <solver name="MLCLSP" cmd="solvers/glpsol" success="0" solution="solution" chart="out/MLCLSP.chart">
+      <options>
+        <option name="model" cmd="-m" value="models/MLCLSP.mod" show="false"/>
+        <option name="data" cmd="-d" value="data/MLCLSP.dat" show="true"/>
+        <option name="log" cmd="--log" value="out/MLCLSP.log" show="false"/>
+        <option name="solution" cmd="-o" value="out/MLCLSP.sol" show="false"/>
+      </options>
+    </solver>
+    <solver name="RCPSP" cmd="solvers/glpsol" success="0" solution="solution" chart="out/RCPSP.chart">
+      <options>
+        <option name="model" cmd="-m" value="models/RCPSP.mod" show="false"/>
+        <option name="data" cmd="-d" value="data/RCPSP.dat" show="true"/>
+        <option name="log" cmd="--log" value="out/RCPSP.log" show="false"/>
+        <option name="solution" cmd="-o" value="out/RCPSP.sol" show="false"/>
+      </options>
+    </solver>
+  </solvers>
+</configuration>
